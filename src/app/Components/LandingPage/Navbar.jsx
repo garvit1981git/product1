@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
-  let centerLinks = ["home", "about", "Inventory", "Dashboard"];
+  let centerLinks = ["/", "/", "Inventory", "Dashboard"];
   let AuthLinks = ["sign-in", "sign-out"];
 
   return (
