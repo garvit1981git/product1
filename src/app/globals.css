@@ -1,26 +1,17 @@
 @import "tailwindcss";
+/* for heading   */
+@import "@fontsource/fraunces";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* for paragh and text */
+@import "@fontsource/nunito/400.css"; /* Regular */
+@import "@fontsource/nunito/500.css"; /* Medium */
+@import "@fontsource/nunito/600.css"; /* Semi-bold */
+@import "@fontsource/nunito/700.css";
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@import "@fontsource/overpass/400.css";
+@import "@fontsource/overpass/700.css";
+@import "@fontsource/overpass/400-italic.css";
+@import "@fontsource/bungee-inline";
+@import "@fontsource/bungee-outline";
+/* npm install @fontsource/bungee-outline */
+/* npm install @fontsource/bungee-inline */
