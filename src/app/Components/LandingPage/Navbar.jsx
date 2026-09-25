@@ -3,23 +3,27 @@ import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
-  let centerLinks = ["/", "/", "Inventory", "Dashboard"];
+  let centerLinks = ["home", "about", "Inventory", "Dashboard"];
   let AuthLinks = ["sign-in", "sign-out"];
-
+  let itmelink;
   return (
     <nav className="flex capitalize fixed w-full top-0 z-50 items-center font-medium justify-between px-6 py-4 backdrop-blur-md  whitespace-nowrap">
       <div className="logo ">logo</div>
       <div className="centre flex gap-7  ml-10">
         {centerLinks.map((itm) => {
+          if (itm === "home" || itm === "about") {
+            itmelink = "/";
+          } else {
+            itmelink = itm;
+          }
           return (
             <React.Fragment key={itm}>
-              <Link href={itm}>
-              
-              <div className="item transition-colors duration-300  ease-in-out group-hover:delay-0 flex flex-col group cursor-pointer px-3.5 py-2  hover:bg-[#cdb4db]/40 rounded-4xl">
-                <span>{itm}</span>
+              <Link href={itmelink}>
+                <div className="item transition-colors duration-300  ease-in-out group-hover:delay-0 flex flex-col group cursor-pointer px-3.5 py-2  hover:bg-[#cdb4db]/40 rounded-4xl">
+                  <span>{itm}</span>
 
-                {/* <span className='h-0.5 group-hover:w-full  origin-left transition-all duration-300  w-0 bg-red-500'></span> */}
-              </div>
+                  {/* <span className='h-0.5 group-hover:w-full  origin-left transition-all duration-300  w-0 bg-red-500'></span> */}
+                </div>
               </Link>
             </React.Fragment>
           );
@@ -38,7 +42,7 @@ const Navbar = () => {
           );
         })}
       </div>
-    </nav>  
+    </nav>
   );
 };
 
